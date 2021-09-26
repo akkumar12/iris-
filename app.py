@@ -15,15 +15,16 @@ def home():
 @app.route('/prediction', methods=['POST'])
 def prediction():
     Id = request.form['Id']
+    SepalLengthCm =request.form['SepalLengthCm']
     SepalWidthCm = request.form['SepalWidthCm']
     PetalLengthCm = request.form['PetalLengthCm']
 
 
-    prediction = loadedModel.predict([[Id,SepalWidthCm,PetalLengthCm]])
+    prediction = loadedModel.predict([[SepalLengthcm,Id,SepalWidthCm,PetalLengthCm]])
 
     if prediction[0] == 0:
         prediction = "Iris-setosa"
-    elif prediction[0] == 0:
+    elif prediction[1] == 1:
         prediction = "Iris-versicolor"
     else:
         prediction = "Iris-virginica"
