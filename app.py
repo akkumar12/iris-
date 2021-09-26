@@ -24,7 +24,7 @@ def prediction():
 
     if prediction[0] == 0:
         prediction = "Iris-setosa"
-    elif prediction[1] == 1:
+    elif prediction = "Iris-setosa" and "Iris-virginica"
         prediction = "Iris-versicolor"
     else:
         prediction = "Iris-virginica"
