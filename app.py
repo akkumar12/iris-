@@ -20,7 +20,7 @@ def prediction():
     PetalLengthCm = request.form['PetalLengthCm']
 
 
-    prediction = loadedModel.predict([[SepalLengthcm,Id,SepalWidthCm,PetalLengthCm]])
+    prediction = loadedModel.predict([[Id,SepalLengthcmSepalWidthCm,PetalLengthCm]])
 
     if prediction[0] == 0:
         prediction = "Iris-setosa"
